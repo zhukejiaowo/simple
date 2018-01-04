@@ -1,6 +1,8 @@
 package com.zhukejiaowo.simple.httpcore;
 
 
+import com.zhukejiaowo.simple.annotation.GuavaStrategy;
+import com.zhukejiaowo.simple.enums.GuavaStrategyEnum;
 import org.apache.http.ConnectionReuseStrategy;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
@@ -25,7 +27,14 @@ import java.net.Socket;
  */
 public class ElementalHttpGet {
 
+    @GuavaStrategy(guavaStrategys=GuavaStrategyEnum.WRITE_EXPIRE)
+    public void test(){
+
+    }
+
+
     public static void main(String[] args) throws Exception {
+
         HttpProcessor httpproc = HttpProcessorBuilder.create()
                 .add(new RequestContent())
                 .add(new RequestTargetHost())
