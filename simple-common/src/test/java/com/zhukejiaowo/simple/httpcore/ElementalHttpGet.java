@@ -27,7 +27,6 @@ import java.net.Socket;
  */
 public class ElementalHttpGet {
 
-    @GuavaStrategy(guavaStrategys=GuavaStrategyEnum.WRITE_EXPIRE)
     public void test(){
 
     }
