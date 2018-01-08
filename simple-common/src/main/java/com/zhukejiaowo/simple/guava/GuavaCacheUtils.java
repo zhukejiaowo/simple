@@ -27,6 +27,8 @@ public class GuavaCacheUtils implements GuavaCache {
 
     private Object object = new Object();
 
+
+
     /**
      * 根据本地缓存获取，没有则从redis中获取.
      * @param k
@@ -38,6 +40,7 @@ public class GuavaCacheUtils implements GuavaCache {
      * @throws Exception
      */
     @Override
+    @SuppressWarnings(value = "unchecked") //去除强转警告.
     public <K, V> V getCacheValue(final K k, GuavaKeyEnum guavaEnum, String redisKey) throws Exception{
         ArgsUtils.notNull(guavaEnum,"guava enum");
         ArgsUtils.notBlank(guavaEnum.getPrefix(),guavaEnum.getPrefix());
@@ -51,6 +54,7 @@ public class GuavaCacheUtils implements GuavaCache {
             }
         }
         cache = cacheBuilderMap.get(guavaEnum.getPrefix());
+        //TODO  需要增加针对redis的调用以及null值的处理.
         return cache.get(k, new Callable<V>() {
             @Override
             public V call() throws Exception {

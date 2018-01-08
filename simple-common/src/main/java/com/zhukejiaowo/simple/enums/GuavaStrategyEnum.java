@@ -37,7 +37,7 @@ public enum GuavaStrategyEnum {
      * TTL 写入存活期刷新策略.
      */
     WRITE_REFRESH,
-
+    ;
 
 
 
