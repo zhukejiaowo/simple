@@ -33,6 +33,8 @@
         <common.text>1.2</common.text>
         <guava.version>23.0</guava.version>
         <lombok.version>1.16.18</lombok.version>
+        <log4j.version>2.10.0</log4j.version>
+        <lmax.disruptor>3.3.7</lmax.disruptor>
 
 
         <!-- for maven compiler&resources plugin -->
@@ -146,6 +148,53 @@
                 <scope>provided</scope>
             </dependency>
             <!--lombok end -->
+
+            <!-- log4j2  start-->
+                <dependency>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-api</artifactId>
+                    <version>${log4j.version}</version>
+                </dependency>
+                <dependency>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-core</artifactId>
+                    <version>${log4j.version}</version>
+                </dependency>
+                <!--log4j 1.X转换到 2.X上来 -->
+                <dependency>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-1.2-api</artifactId>
+                    <version>${log4j.version}</version>
+                </dependency>
+                <!-- 适配 slf4j接口规范实现的日志落地 -->
+                <dependency>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-slf4j-impl</artifactId>
+                    <version>${log4j.version}</version>
+                </dependency>
+                <!-- 适配 Commons Logging接口规范实现的日志落地 spring在用-->
+                <dependency>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-jcl</artifactId>
+                    <version>${log4j.version}</version>
+                </dependency>
+                <!--log4j2 web应用时用 -->
+                <dependency>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-web</artifactId>
+                    <version>${log4j.version}</version>
+                </dependency>
+
+                <!-- disruptor 用于log4j2的异步日志处理. start-->
+                <dependency>
+                    <groupId>com.lmax</groupId>
+                    <artifactId>disruptor</artifactId>
+                    <version>${lmax.disruptor}</version>
+                </dependency>
+                <!-- disruptor 用于log4j2的异步日志处理. end-->
+
+            <!-- log4j2  end-->
+
 
         </dependencies>
 
