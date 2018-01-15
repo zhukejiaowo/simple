@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/simple.iml" filepath="$PROJECT_DIR$/simple.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple-common/simple-common.iml" filepath="$PROJECT_DIR$/simple-common/simple-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/simple-springboot/simple-springboot.iml" filepath="$PROJECT_DIR$/simple-springboot/simple-springboot.iml" />
     </modules>
   </component>
 </project>

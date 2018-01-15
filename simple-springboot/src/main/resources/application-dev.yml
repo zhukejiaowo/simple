@@ -1,0 +1,4 @@
+system:
+  name: "Simple Platform"
+  userWelcome: "欢迎来到我的地盘.我们的口号是:大道至简,饮水思源!"
+  notfilterUrl: /,/login
